@@ -1,3 +1,12 @@
+
+First, run "tfds build domainnet" to generate domainnet tfrecord.
+
+Then, run:
+'python main.py --my_config configs/domainnet_l2p.py --workdir=./domaninet_l2p/ --my_config.init_checkpoint=.
+/ViT-B_16.npz'
+
+
+
 # [Learning to Prompt for Continual Learning (L2P)](https://arxiv.org/pdf/2112.08654.pdf) Official Jax Implementation
 
 L2P is a novel continual learning technique which learns to dynamically prompt a pre-trained model to learn tasks sequentially under different task transitions. Different from mainstream rehearsal-based or architecture-based methods, L2P requires neither a rehearsal buffer nor test-time task identity. L2P can be generalized to various continual learning settings including the most challenging and realistic task-agnostic setting. L2P consistently outperforms prior state-of-the-art methods. Surprisingly, L2P achieves competitive results against rehearsal-based methods even without a rehearsal buffer.
